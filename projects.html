@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Projects</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+      /* Background animation */
+body {
+  background: linear-gradient(-45deg, #c0cee8, #b8d3fe, #e2eafc, #d2e1f7);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Page title */
+h1 {
+  background: linear-gradient(90deg, #0d6efd, #0044ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  animation: fadeIn 1s ease;
+}
+
+/* Cards */
+.card {
+  border-radius: 16px;
+  overflow: hidden;
+  backdrop-filter: blur(6px);
+  transform: scale(1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 10px 30px rgba(13, 110, 253, 0.2);
+}
+
+/* Card images */
+.card img {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Card title */
+.card-title {
+  color: #0d6efd;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* Buttons */
+.btn-primary {
+  background: linear-gradient(90deg, #0d6efd, #0044ff);
+  border: none;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(90deg, #0044ff, #0d6efd);
+}
+
+.btn-outline-secondary:hover {
+  background-color: #e7f1ff;
+  color: #0d6efd;
+}
+
+/* "More Projects" card */
+.card.text-center {
+  background: rgba(255, 255, 255, 0.9) !important;
+  border: 2px dashed #0d6efd;
+}
+
+/* Footer */
+footer {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(6px);
+}
+
+/* Keyframes */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+  </style>
+</head>
+<body>
+  <div class="container py-5">
+  <h1 class="text-center mb-5">My Projects</h1>
+
+  <div class="row g-4">
+    <!-- Project Card 1 -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card h-100 shadow-sm">
+        <img src="assets/images/image.png" class="card-img-top" alt="Project 1" />
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">IMPACT</h5>
+          <p class="card-text">
+            Developed the frontend for the IMPACT 2025 VR/AR Conference website,
+            focusing on responsive design, accessibility, and interactive user
+            experience. Built using HTML, CSS, and JavaScript.
+          </p>
+          <div class="mt-auto">
+            <a href="https://impact.jordan.ieee.org/" class="btn btn-primary btn-sm" target="_blank">View</a>
+            <a href="https://github.com/MahmoudALhaddad" class="btn btn-outline-secondary btn-sm" target="_blank">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project Card 2 -->
+    <div class="col-md-6 col-lg-4">
+      <div class="card h-100 shadow-sm">
+        <img src="assets/images/coffeCup.jpg" class="card-img-top" alt="Project 2" />
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Tableware E-Commerce Website</h5>
+          <p class="card-text">
+            Developed a responsive e-commerce website for traditional Arabic tableware.
+            Built with React, Node.js, Express, and PostgreSQL, focusing on user-friendly
+            browsing and seamless API integration.
+          </p>
+          <div class="mt-auto">
+            <a href="#" class="btn btn-primary btn-sm" target="_blank">In Progress</a>
+            <a href="https://github.com/MahmoudALhaddad" class="btn btn-outline-secondary btn-sm" target="_blank">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- More Projects Card -->
+<div class="col-md-6 col-lg-4">
+  <div
+    class="card h-100 d-flex flex-column justify-content-center align-items-center text-center p-4 shadow-sm"
+    style="background-color: #f0f4ff;"
+  >
+    <h5 class="card-title mb-3">More Projects</h5>
+    <p class="card-text mb-4">
+      Check out more of my work on GitHub.
+    </p>
+    <a
+      href="https://github.com/MahmoudALhaddad"
+      class="btn btn-primary"
+      target="_blank"
+      rel="noopener"
+      >GitHub Profile</a
+    >
+  </div>
+</div>
+
+
+
+  </div>
+</div>
+
+  <footer class="bg-light text-center py-3 mt-5">
+    <p class="mb-0">&copy; <span id="year"></span> Mahmoud Haddad. All rights reserved.</p>
+  </footer>
+
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>
