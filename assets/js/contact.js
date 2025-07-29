@@ -29,7 +29,21 @@ document.getElementById('contactForm').addEventListener('submit', function(event
   validateField('message');
 
   if (valid) {
-    alert('Thank you for contacting me! I will get back to you soon.');
-    form.reset();
+    // Prepare EmailJS params
+    const templateParams = {
+      from_name: form.name.value,
+      from_email: form.email.value,
+      subject: form.subject.value,
+      message: form.message.value,
+    };
+
+    emailjs.send('service_yuy4m7n', 'template_de38ays', templateParams)
+      .then(() => {
+        alert('Thank you for contacting me! I will get back to you soon.');
+        form.reset();
+      }, (error) => {
+        console.error('EmailJS error:', error);
+        alert('Oops! Something went wrong. Please try again later.');
+      });
   }
 });
