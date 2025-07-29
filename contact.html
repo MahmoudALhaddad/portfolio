@@ -145,13 +145,20 @@
     </section>
   </div>
 
-  <script src="./assets/js/contact.js"></script>
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-  ></script>
-  <script src="https://cdn.emailjs.com/sdk/3.2.0/email.min.js"></script>
-  <script>
-    emailjs.init("188322dEhscY_q6Z-"); 
-  </script>
+  <!-- Load EmailJS SDK first -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<!-- Initialize EmailJS with your public key -->
+<script>
+  emailjs.init("188322dEhscY_q6Z-"); 
+</script>
+
+<!-- Now load your contact.js (it uses emailjs) -->
+<script src="./assets/js/contact.js"></script>
+
+<!-- Finally, load Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
 </body>
 </html>
